@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+
+body{overflow-x: hidden; background: url(../images/background10.png); background-attachment: fixed; background-size: cover; background-repeat: no-repeat;}
+
+header {padding: 35px 100px; width: 100%; box-sizing: border-box; z-index: 100; background: url(); background-size: cover; position: relative;}
+header .logo {height: 40px; line-height: 50px; float: left; position: relative;}
+header .logo .img{position: relative;}
+header .logo p{position: absolute; left: 10px; top: 65px;; font-family: great vibes,sans-serif; font-size: 20px; color: rgb(0,255,6); font-weight: 700;}
+header .logo .img img{width: 80px; max-width: 100%;}
+header nav {display: flex; justify-content: center;}
+header nav ul {display: flex; margin: 2% 0; padding: 0;}
+header nav ul li {list-style: none; position: relative;}
+header nav ul li .sub-menu:before {content: "\f0d7"; position: absolute; font-family: fontAwesome; line-height: 50px; color: #fff; right: 5px;}
+header nav ul li.active .sub-menu:before {content: "\f0d8";}
+/*dropdown-starts*/
+header nav ul li ul {position: absolute; left: 0; background: #333; display: none; padding: 10px 0;}
+header nav ul li.active ul {display: block; text-align: center;}
+header nav ul li ul li {display: block; width: 200px;}
+header nav ul li a {color: #d9d9d9; text-decoration: none; padding: 0 20px; height: 50px; line-height: 50px; display: block; position: relative; font-family: poppins,sans-serif; font-size: 16px;}
+header nav ul li a:hover{color: #ffffff; transition: all .3s;}
+header nav ul li a:hover:after {background: linear-gradient(90deg, rgba(0,255,6,1) 0%, rgba(0,128,3,1) 100%); content: ''; position: absolute; height: 3px; width: 60px; bottom: 0; left: 50%; transform: translateX(-50%); transition: all ease-in-out .3s;} 
+.menu-toggle {color: #fff; float: right; line-height: 50px; font-size: 24px; cursor: pointer; display: none;}
+@media (max-width: 991px) {
+  header {padding: 30px 20px;}
+  .menu-toggle {display: block;}
+  header nav {position: absolute; width: 100%; height: calc(100vh - 50px); background: rgba(0, 0, 0); top: 70px; left: -100%; transition: 0.5s;}
+  header nav.active {left: 0;}
+  header nav ul {display: block; text-align: center;}
+  header nav ul li a {border-bottom: 1px solid rgba(0, 0, 0, 0.2);}
+  header nav ul li.active ul {position: relative; background: #000000;}
+  header nav ul li ul li {width: 100%;}}
+  header nav ul li .sub-menu::before {display: none;}
+
+  /* banner */
+
+  .banner{background-size: cover; position: relative; padding: 0px 0px;}
+  .banner .img#middle{text-align: center; margin-top: 1%;}
+  .banner .img#middle img{width: 80px; height: 50px;}
+  .banner .bannerinfo .col-md-6 img{max-width: 100%; position: relative;}
+  .banner .bannerinfo .col-md-6 h1{text-align: start; color: #d9d9d9; margin-top: 15%; font-family: Great Vibes,sans-serif; letter-spacing: 4px; font-size: 55px; padding-bottom: 3%; padding-top: 10%; position: relative;}
+  .banner .background .img#topleft img{position: absolute; top: -125px; left: -100px; width: 300px; max-width: 100%; }
+  .banner .background .img#bottomleft img{position: absolute; bottom: 0px; left: -60px; width: 300px; max-width: 100%; }
+  .banner .background .img#bottomright img{position: absolute; bottom: 0px; right: -117px; width: 300px; max-width: 100%; }
+  .banner .bannerinfo .info .col-2{margin: 0; padding: 0; text-align: center;}
+  .banner .bannerinfo .info .col-10{margin: 0; padding: 0; }
+  .banner .bannerinfo .info p{text-align: start; color: #d9d9d9; font-family: poppins,sans-serif; font-size: 18px; letter-spacing: 3px; margin-right: 25%; position: relative;}
+  .banner .bannerinfo .info p span{color: rgb(0,255,6);}
+  .banner .bannerinfo .info i{color: black; background: linear-gradient(90deg, rgba(0,255,6,1) 0%, rgba(0,128,3,1) 100%); padding: 15px; font-size: 30px; border-radius: 50%; position: relative;}
+  .banner .bannerinfo form{text-align: start; position: relative; padding-top: 3%;}
+  .banner .bannerinfo form input#phone{padding: 15px 20px; width: 320px; max-width: 100%; border-radius: 50px; border: 2px solid #d9d9d9;}
+  .banner .bannerinfo form input#submit{padding: 8px 25px; position: absolute; left: 35%; border-radius: 50px; bottom: 6.5px; background: linear-gradient(90deg, rgba(46,195,49) 0%, rgba(0,128,3,1) 100%); color: #ffffff; border: 2px solid rgb(0,255,6);}
+  .banner .bannerinfo form input#submit:hover{color: rgb(0,255,6); border: 2px solid rgb(0,255,6); background: transparent;}
+
+   @media only screen and (max-width: 1400px) {
+    .banner .background .img#topleft img{position: absolute; top: -125px; left: -100px; width: 250px; max-width: 100%; }
+    .banner .background .img#bottomleft img{position: absolute; bottom: 0px; left: -60px; width: 250px; max-width: 100%; }
+    .banner .background .img#bottomright img{position: absolute; bottom: 0px; right: -117px; width: 250px; max-width: 100%; }
+    .banner .bannerinfo form input#submit{padding: 8px 25px; position: absolute; left: 41%; border-radius: 50px; bottom: 6.5px; background: linear-gradient(90deg, rgba(46,195,49) 0%, rgba(0,128,3,1) 100%); color: #ffffff; border: 2px solid rgb(0,255,6);}
+   }
+   @media only screen and (max-width: 1199px) {
+    .banner .background .img#topleft img{position: absolute; top: -125px; left: -100px; width: 200px; max-width: 100%; }
+    .banner .background .img#bottomleft img{position: absolute; bottom: 0px; left: -60px; width: 200px; max-width: 100%; }
+    .banner .background .img#bottomright img{position: absolute; bottom: 0px; right: -117px; width: 200px; max-width: 100%; }
+    .banner .bannerinfo form input#submit{padding: 8px 25px; position: absolute; left: 49%; border-radius: 50px; bottom: 6.5px; background: linear-gradient(90deg, rgba(46,195,49) 0%, rgba(0,128,3,1) 100%); color: #ffffff; border: 2px solid rgb(0,255,6);}
+    .banner .bannerinfo .col-md-6 h1{text-align: start; color: #d9d9d9; margin-top: 15%; font-family: Great Vibes,sans-serif; letter-spacing: 4px; font-size: 45px; padding-bottom: 3%; padding-top: 10%; position: relative;} 
+    .banner .bannerinfo .info p{text-align: start; color: #d9d9d9; font-family: poppins,sans-serif; font-size: 18px; letter-spacing: 3px; margin-right: 25%; position: relative;}
+  }
+   @media only screen and (max-width: 992px) {
+    .banner .background .img#topleft img{position: absolute; top: -125px; left: -150px; width: 200px; max-width: 100%; }
+    .banner .background .img#bottomleft img{position: absolute; bottom: 0px; left: -60px; width: 200px; max-width: 100%; }
+    .banner .background .img#bottomright img{position: absolute; bottom: 0px; right: -117px; width: 200px; max-width: 100%; }
+    .banner .bannerinfo form input#submit{padding: 8px 25px; position: absolute; left: 66%; border-radius: 50px; bottom: 6.5px; background: linear-gradient(90deg, rgba(46,195,49) 0%, rgba(0,128,3,1) 100%); color: #ffffff; border: 2px solid rgb(0,255,6);}
+    .banner .bannerinfo .col-md-6 h1{text-align: start; color: #d9d9d9; margin-top: 15%; font-family: Great Vibes,sans-serif; letter-spacing: 4px; font-size: 40px; padding-bottom: 3%; padding-top: 10%; position: relative;} 
+    .banner .bannerinfo .info p{text-align: start; color: #d9d9d9; font-family: poppins,sans-serif; font-size: 17px; letter-spacing: 3px; margin-right: 25%; position: relative;}
+  }
+   @media only screen and (max-width: 768px) {
+    .banner .background .img#topleft img{position: absolute; top: -125px; left: -100px; width: 200px; max-width: 100%; }
+    .banner .background .img#bottomleft img{position: absolute; bottom: 0px; left: -60px; width: 200px; max-width: 100%; }
+    .banner .background .img#bottomright img{position: absolute; bottom: 0px; right: -117px; width: 200px; max-width: 100%; }
+    .banner .bannerinfo form input#submit{padding: 8px 25px; position: absolute; left: 43%; border-radius: 50px; bottom: 6.5px; background: linear-gradient(90deg, rgba(46,195,49) 0%, rgba(0,128,3,1) 100%); color: #ffffff; border: 2px solid rgb(0,255,6);}
+    .banner .bannerinfo .col-md-6 h1{text-align: start; color: #d9d9d9; margin-top: 15%; font-family: Great Vibes,sans-serif; letter-spacing: 4px; font-size: 35px; padding-bottom: 3%; padding-top: 10%; position: relative;} 
+    .banner .bannerinfo .info p{text-align: start; color: #d9d9d9; font-family: poppins,sans-serif; font-size: 16px; letter-spacing: 3px; margin-right: 25%; position: relative;}
+  }
+   @media only screen and (max-width: 576px) {
+    .banner .background .img#topleft img{position: absolute; top: -125px; left: -175px; width: 200px; max-width: 100%; }
+    .banner .background .img#bottomleft img{position: absolute; bottom: 0px; left: -60px; width: 200px; max-width: 100%; }
+    .banner .background .img#bottomright img{position: absolute; bottom: 0px; right: -117px; width: 200px; max-width: 100%; }
+    .banner .bannerinfo form input#submit{padding: 8px 25px; position: absolute; left: 40%; border-radius: 50px; bottom: 6.5px; background: linear-gradient(90deg, rgba(46,195,49) 0%, rgba(0,128,3,1) 100%); color: #ffffff; border: 2px solid rgb(0,255,6);}
+    .banner .bannerinfo .col-md-6 h1{text-align: start; color: #d9d9d9; margin-top: 15%; font-family: Great Vibes,sans-serif; letter-spacing: 4px; font-size: 30px; padding-bottom: 3%; padding-top: 10%; position: relative;} 
+    .banner .bannerinfo .info p{text-align: start; color: #d9d9d9; font-family: poppins,sans-serif; font-size: 15px; letter-spacing: 3px; margin-right: 25%; position: relative;}
+  }
+   @media only screen and (max-width: 530px) {
+    .banner .bannerinfo form input#submit{padding: 8px 25px; position: absolute; left: 45%; border-radius: 50px; bottom: 6.5px; background: linear-gradient(90deg, rgba(46,195,49) 0%, rgba(0,128,3,1) 100%); color: #ffffff; border: 2px solid rgb(0,255,6);}
+  }
+   @media only screen and (max-width: 460px) {
+    .banner .bannerinfo form input#submit{padding: 8px 25px; position: absolute; left: 50%; border-radius: 50px; bottom: 6.5px; background: linear-gradient(90deg, rgba(46,195,49) 0%, rgba(0,128,3,1) 100%); color: #ffffff; border: 2px solid rgb(0,255,6);}
+  }
+   @media only screen and (max-width: 390px) {
+    .banner .bannerinfo form input#submit{padding: 8px 25px; position: absolute; left: 61%; border-radius: 50px; bottom: 6.5px; background: linear-gradient(90deg, rgba(46,195,49) 0%, rgba(0,128,3,1) 100%); color: #ffffff; border: 2px solid rgb(0,255,6);}
+  }
+
+
+  /* banner */
+
+  .secwhatcanyoucook{background-size: cover; position: relative;  padding: 50px 0;}
+  .secwhatcanyoucook .background .img#topleft img{position: absolute; top: 0px; left: -91px; width: 300px; max-width: 100%; }
+  .secwhatcanyoucook .background .img#bottomleft img{position: absolute; bottom: 0px; left: -78px; width: 284px; max-width: 100%; }
+  .secwhatcanyoucook .background .img#topright img{position: absolute; top: 0px; right: -120px; width: 300px; max-width: 100%; }
+  .secwhatcanyoucook .img#middle{text-align: center; margin-top: 1%;}
+  .secwhatcanyoucook .img#middle img{width: 90px; height: 60px;}
+  .secwhatcanyoucook h2{text-align: center; font-size: 50px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%;}
+  .secwhatcanyoucook p{text-align: center; color: #d9d9d9; font-family: poppins,sans-serif; font-size: 18px; letter-spacing: 2px;}
+  .secwhatcanyoucook p span{color: rgb(0,255,6);}
+  .secwhatcanyoucook .owl-carousel{margin-top: 5%;}
+  .secwhatcanyoucook .item .menubox{text-align: center; box-sizing: border-box; padding: 0 3%; margin: 2% 0;}
+  .secwhatcanyoucook .item .menubox .menuimg img{max-width: 100%; width: 350px; height: 300px;}
+  .secwhatcanyoucook .item .menubox .menuname h5{font-family: Great vibes,sans-serif; font-size: 30px; color: #d9d9d9; letter-spacing: 2px;}
+  .secwhatcanyoucook .item .menubox .menuinfo p{font-family: poppins,sans-serif; font-size: 18px; color: #d9d9d9; letter-spacing: 1px;}
+  .secwhatcanyoucook .item .menubox .btn a{color: rgb(0,255,6); text-decoration: none; padding: 8px 15px;}
+  .secwhatcanyoucook .item .menubox:hover .btn a::after{background: linear-gradient(90deg, rgba(0,255,6,1) 0%, rgba(0,128,3,1) 100%); content: ''; position: absolute; height: 3px; width: 60px; bottom: 0; left: 50%; transform: translateX(-50%); transition: all ease-in-out .3s;}
+
+  @media only screen and (max-width: 1400px) {
+    .secwhatcanyoucook .background .img#topleft img{position: absolute; top: 0px; left: -91px; width: 250px; max-width: 100%; }
+    .secwhatcanyoucook .background .img#bottomleft img{position: absolute; bottom: 0px; left: -78px; width: 284px; max-width: 100%; }
+    .secwhatcanyoucook .background .img#topright img{position: absolute; top: 0px; right: -120px; width: 250px; max-width: 100%; }
+  }
+  @media only screen and (max-width: 1199px) {
+    .secwhatcanyoucook .background .img#topleft img{position: absolute; top: 0px; left: -91px; width: 200px; max-width: 100%; }
+    .secwhatcanyoucook .background .img#bottomleft img{position: absolute; bottom: 0px; left: -78px; width: 284px; max-width: 100%; }
+    .secwhatcanyoucook .background .img#topright img{position: absolute; top: 0px; right: -120px; width: 200px; max-width: 100%; }
+    .secwhatcanyoucook h2{text-align: center; font-size: 40px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%;}
+    .secwhatcanyoucook p{text-align: center; color: #d9d9d9; font-family: poppins,sans-serif; font-size: 17px; letter-spacing: 2px;}
+    .secwhatcanyoucook .item .menubox .menuinfo p{font-family: poppins,sans-serif; font-size: 17px; color: #d9d9d9; letter-spacing: 1px;}
+  }
+  @media only screen and (max-width: 992px) {
+    .secwhatcanyoucook .background .img#topleft img{position: absolute; top: 0px; left: -91px; width: 200px; max-width: 100%; }
+    .secwhatcanyoucook .background .img#bottomleft img{position: absolute; bottom: 0px; left: -78px; width: 284px; max-width: 100%; }
+    .secwhatcanyoucook .background .img#topright img{position: absolute; top: 0px; right: -120px; width: 200px; max-width: 100%; }
+    .secwhatcanyoucook h2{text-align: center; font-size: 35px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%;}
+    .secwhatcanyoucook p{text-align: center; color: #d9d9d9; font-family: poppins,sans-serif; font-size: 16px; letter-spacing: 2px;}
+    .secwhatcanyoucook .item .menubox .menuname h5{font-family: Great vibes,sans-serif; font-size: 25px; color: #d9d9d9; letter-spacing: 2px;}
+    .secwhatcanyoucook .item .menubox .menuinfo p{font-family: poppins,sans-serif; font-size: 16px; color: #d9d9d9; letter-spacing: 1px;}
+  }
+  @media only screen and (max-width: 768px) {
+    .secwhatcanyoucook .background .img#topleft img{position: absolute; top: 0px; left: -91px; width: 200px; max-width: 100%; }
+    .secwhatcanyoucook .background .img#bottomleft img{position: absolute; bottom: 0px; left: -78px; width: 284px; max-width: 100%; }
+    .secwhatcanyoucook .background .img#topright img{position: absolute; top: 0px; right: -120px; width: 200px; max-width: 100%; }
+    .secwhatcanyoucook h2{text-align: center; font-size: 30px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%;}
+    .secwhatcanyoucook p{text-align: center; color: #d9d9d9; font-family: poppins,sans-serif; font-size: 15px; letter-spacing: 2px;}
+    .secwhatcanyoucook .item .menubox .menuname h5{font-family: Great vibes,sans-serif; font-size: 20px; color: #d9d9d9; letter-spacing: 2px;}
+    .secwhatcanyoucook .item .menubox .menuinfo p{font-family: poppins,sans-serif; font-size: 15px; color: #d9d9d9; letter-spacing: 1px;}
+  }
+  @media only screen and (max-width: 576px) {
+    .secwhatcanyoucook .background .img#topleft img{position: absolute; top: 0px; left: -91px; width: 200px; max-width: 100%; }
+    .secwhatcanyoucook .background .img#bottomleft img{position: absolute; bottom: 0px; left: -78px; width: 284px; max-width: 100%; }
+    .secwhatcanyoucook .background .img#topright img{position: absolute; top: 0px; right: -120px; width: 200px; max-width: 100%; }
+    .secwhatcanyoucook h2{text-align: center; font-size: 25px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%;}
+    .secwhatcanyoucook p{text-align: center; color: #d9d9d9; font-family: poppins,sans-serif; font-size: 14px; letter-spacing: 2px;}
+    .secwhatcanyoucook .item .menubox .menuname h5{font-family: Great vibes,sans-serif; font-size: 18px; color: #d9d9d9; letter-spacing: 2px;}
+    .secwhatcanyoucook .item .menubox .menuinfo p{font-family: poppins,sans-serif; font-size: 14px; color: #d9d9d9; letter-spacing: 1px;}
+  }
+
+  /* ourproduction */
+
+  .secourproduction{background-size: cover; position: relative; padding: 50px 0;}
+  .secourproduction .background .img#topright img{position: absolute; top: 0px; right: -220px; width: 450px; max-width: 100%;}
+  .secourproduction .background .img#topleft img{position: absolute; top: -140px; left: -200px; width: 400px; max-width: 100%;}
+  .secourproduction .img#middle{text-align: center; margin-top: 1%; position: relative;}
+  .secourproduction .img#middle img{width: 90px; height: 60px;}
+  .secourproduction h2{text-align: center; font-size: 50px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%; position: relative;}
+
+  @media only screen and (max-width: 1400px) {
+    .secourproduction .background .img#topright img{position: absolute; top: 0px; right: -220px; width: 400px; max-width: 100%;}
+    .secourproduction .background .img#topleft img{position: absolute; top: -140px; left: -200px; width: 350px; max-width: 100%;}
+  }
+  @media only screen and (max-width: 1199px) {
+    .secourproduction .background .img#topright img{position: absolute; top: 0px; right: -220px; width: 350px; max-width: 100%;}
+    .secourproduction .background .img#topleft img{position: absolute; top: -140px; left: -200px; width: 300px; max-width: 100%;}
+    .secourproduction h2{text-align: center; font-size: 40px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%; position: relative;}
+  }
+  @media only screen and (max-width: 992px) {
+    .secourproduction .background .img#topright img{position: absolute; top: 0px; right: -220px; width: 350px; max-width: 100%;}
+    .secourproduction .background .img#topleft img{position: absolute; top: -140px; left: -200px; width: 300px; max-width: 100%;}
+    .secourproduction h2{text-align: center; font-size: 35px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%; position: relative;}
+  }
+  @media only screen and (max-width: 768px) {
+    .secourproduction .background .img#topright img{position: absolute; top: 0px; right: -280px; width: 350px; max-width: 100%;}
+    .secourproduction .background .img#topleft img{position: absolute; top: -140px; left: -240px; width: 300px; max-width: 100%;}
+    .secourproduction h2{text-align: center; font-size: 30px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%; position: relative;}
+  }
+  @media only screen and (max-width: 576px) {
+    .secourproduction .background .img#topright img{position: absolute; top: 0px; right: -300px; width: 350px; max-width: 100%;}
+    .secourproduction .background .img#topleft img{position: absolute; top: -140px; left: -260px; width: 300px; max-width: 100%;}
+    .secourproduction h2{text-align: center; font-size: 25px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%; position: relative;}
+  }
+
+  /* secaboutcompany */
+
+  .secaboutcompany{background-size: cover; position: relative; padding: 50px 0;}
+  .secaboutcompany .background .img#topleft img{position: absolute; top: -75px; left: -34.5px; width: 300px; max-width: 100%;}
+  .secaboutcompany .background .img#topright img{position: absolute; top: -80px; right: -139px; width: 300px; max-width: 100%;}
+  .secaboutcompany .background .img#bottomright img{position: absolute; bottom: 0px; right: -121px; width: 281px; max-width: 100%;}
+  .secaboutcompany .img#middle{text-align: center; margin-top: 1%; position: relative;}
+  .secaboutcompany .img#middle img{width: 90px; height: 60px;}
+  .secaboutcompany h2{text-align: center; font-size: 50px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%; position: relative;}
+  .secaboutcompany .col-md-6 .img img{max-width: 100%;}
+  .secaboutcompany .col-md-6 p{font-family: poppins,sans-serif; font-size: 18px; color: #d9d9d9;}
+  .secaboutcompany .col-md-6 span{color: rgb(0,255,6)}
+  .secaboutcompany .col-md-6 h3{color: rgb(0,255,6); font-size: 90px; font-family: Great vibes,sans-serif; padding-top: 5%;}
+
+  @media only screen and (max-width: 1400px) {
+    .secaboutcompany .background .img#topleft img{position: absolute; top: -75px; left: -34.5px; width: 250px; max-width: 100%;}
+    .secaboutcompany .background .img#topright img{position: absolute; top: -80px; right: -139px; width: 250px; max-width: 100%;}
+    .secaboutcompany .background .img#bottomright img{position: absolute; bottom: 0px; right: -121px; width: 281px; max-width: 100%;}
+  }
+  @media only screen and (max-width: 1199px) {
+    .secaboutcompany .background .img#topleft img{position: absolute; top: -75px; left: -34.5px; width: 200px; max-width: 100%;}
+    .secaboutcompany .background .img#topright img{position: absolute; top: -80px; right: -139px; width: 230px; max-width: 100%;}
+    .secaboutcompany .background .img#bottomright img{position: absolute; bottom: 0px; right: -121px; width: 281px; max-width: 100%;}
+    .secaboutcompany h2{text-align: center; font-size: 40px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%; position: relative;}
+    .secaboutcompany .col-md-6 p{font-family: poppins,sans-serif; font-size: 16px; color: #d9d9d9;}
+  }
+  @media only screen and (max-width: 992px) {
+    .secaboutcompany .background .img#topleft img{position: absolute; top: -75px; left: -34.5px; width: 200px; max-width: 100%;}
+    .secaboutcompany .background .img#topright img{position: absolute; top: -80px; right: -139px; width: 230px; max-width: 100%;}
+    .secaboutcompany .background .img#bottomright img{position: absolute; bottom: 0px; right: -121px; width: 281px; max-width: 100%;}
+    .secaboutcompany h2{text-align: center; font-size: 35px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%; position: relative;}
+    .secaboutcompany .col-md-6 p{font-family: poppins,sans-serif; font-size: 15px; color: #d9d9d9;}
+  }
+  @media only screen and (max-width: 768px) {
+    .secaboutcompany .background .img#topleft img{position: absolute; top: -75px; left: -34.5px; width: 200px; max-width: 100%;}
+    .secaboutcompany .background .img#topright img{position: absolute; top: -80px; right: -139px; width: 230px; max-width: 100%;}
+    .secaboutcompany .background .img#bottomright img{position: absolute; bottom: 0px; right: -121px; width: 281px; max-width: 100%;}
+    .secaboutcompany h2{text-align: center; font-size: 30px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%; position: relative;}
+    .secaboutcompany .col-md-6 p{font-family: poppins,sans-serif; font-size: 14px; color: #d9d9d9; text-align: center;}
+  }
+  @media only screen and (max-width: 576px) {
+    .secaboutcompany .background .img#topleft img{position: absolute; top: -75px; left: -120px; width: 200px; max-width: 100%;}
+    .secaboutcompany .background .img#topright img{position: absolute; top: -80px; right: -180px; width: 230px; max-width: 100%;}
+    .secaboutcompany .background .img#bottomright img{position: absolute; bottom: 0px; right: -121px; width: 281px; max-width: 100%;}
+    .secaboutcompany h2{text-align: center; font-size: 25px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%; position: relative;}
+    .secaboutcompany .col-md-6 p{font-family: poppins,sans-serif; font-size: 13px; color: #d9d9d9;}
+  }
+
+  /* secfooter */
+
+  
+  .secfooter{background-size: cover; position: relative; padding: 50px 0;}
+  .secfooter .background .img#topleft img{position: absolute; top: -130px; left: -125px; width: 300px; max-width: 100%;}
+  .secfooter .background .img#bottomleft img{position: absolute; bottom: 0px; left: -70px; width: 230px; max-width: 100%;}
+  .secfooter .background .img#topright img{position: absolute; top: -350px; right: -95px; width: 300px; max-width: 100%;}
+  .secfooter .background .img#bottomright img{position: absolute; bottom: 0px; right: -110px; width: 300px; max-width: 100%;}
+  .secfooter .img#middle{text-align: center; margin-top: 1%; position: relative;}
+  .secfooter .img#middle img{width: 110px; height: 100px;}
+  .secfooter h2{text-align: center; font-size: 50px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%; position: relative;}
+  .secfooter p{text-align: center; color: #d9d9d9; font-family: poppins,sans-serif; font-size: 18px; letter-spacing: 2px;}
+  .secfooter p span{color: rgb(0,255,6);}
+  .secfooter form{text-align: center; position: relative; padding-top: 3%;}
+  .secfooter form input#phone{padding: 15px 20px; width: 40%; max-width: 100%; border-radius: 50px; border: 2px solid #d9d9d9;}
+  .secfooter form input#submit{padding: 8px 40px; position: absolute; left: 60%; border-radius: 50px; bottom: 6.5px; background: linear-gradient(90deg, rgba(46,195,49) 0%, rgba(0,128,3,1) 100%); color: #ffffff; border: 2px solid rgb(0,255,6);}
+  .secfooter form input#submit:hover{color: rgb(0,255,6); border: 2px solid rgb(0,255,6); background: transparent;}
+  .secfooter .socialmedia ul{text-align: center; margin-top: 5%;}
+  .secfooter .socialmedia ul li{display: inline-block; padding: 15px;}
+  .secfooter .socialmedia ul li a{text-decoration: none; color: #d9d9d9; font-size: 30px;}
+  .secfooter .socialmedia ul li a:hover{color: rgb(0,255,6);}
+  .secfooter form .form{position: relative; margin-top: 6%;}
+  .secfooter form .img#left img {position: absolute; bottom: -25px; left: 254px; width: 190px; max-width: 100%; z-index: 20;}
+  .secfooter form .img#right img {position: absolute; bottom: -50px; right: 265px; width: 160px; max-width: 100%; z-index: 20;}
+
+  @media only screen and (max-width: 1400px) {
+    .secfooter .background .img#topleft img{position: absolute; top: -130px; left: -125px; width: 250px; max-width: 100%;}
+    .secfooter .background .img#bottomleft img{position: absolute; bottom: 0px; left: -70px; width: 230px; max-width: 100%;}
+    .secfooter .background .img#topright img{position: absolute; top: -350px; right: -95px; width: 250px; max-width: 100%;}
+    .secfooter .background .img#bottomright img{position: absolute; bottom: 0px; right: -110px; width: 250px; max-width: 100%;}
+    .secfooter form .img#left img {position: absolute; bottom: -25px; left: 178px; width: 190px; max-width: 100%; z-index: 20;}
+    .secfooter form .img#right img {position: absolute; bottom: -50px; right: 185px; width: 160px; max-width: 100%; z-index: 20;}
+    .secfooter form input#submit{padding: 8px 40px; position: absolute; left: 58.5%; border-radius: 50px; bottom: 6.5px; background: linear-gradient(90deg, rgba(46,195,49) 0%, rgba(0,128,3,1) 100%); color: #ffffff; border: 2px solid rgb(0,255,6);}
+  }
+  @media only screen and (max-width: 1199px) {
+    .secfooter .background .img#topleft img{position: absolute; top: -130px; left: -125px; width: 200px; max-width: 100%;}
+    .secfooter .background .img#bottomleft img{position: absolute; bottom: 0px; left: -70px; width: 200px; max-width: 100%;}
+    .secfooter .background .img#topright img{position: absolute; top: -350px; right: -95px; width: 200px; max-width: 100%;}
+    .secfooter .background .img#bottomright img{position: absolute; bottom: 0px; right: -110px; width: 200px; max-width: 100%;}
+    .secfooter form .img#left img {position: absolute; bottom: -15px; left: 155px; width: 150px; max-width: 100%; z-index: 20;}
+    .secfooter form .img#right img {position: absolute; bottom: -30px; right: 170px; width: 125px; max-width: 100%; z-index: 20;}
+    .secfooter form input#submit{padding: 8px 40px; position: absolute; left: 56.5%; border-radius: 50px; bottom: 6.5px; background: linear-gradient(90deg, rgba(46,195,49) 0%, rgba(0,128,3,1) 100%); color: #ffffff; border: 2px solid rgb(0,255,6);}
+    .secfooter h2{text-align: center; font-size: 40px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%; position: relative;}
+    .secfooter p{text-align: center; color: #d9d9d9; font-family: poppins,sans-serif; font-size: 17px; letter-spacing: 2px;}
+  }
+  @media only screen and (max-width: 992px) {
+    .secfooter .background .img#topleft img{position: absolute; top: -130px; left: -125px; width: 200px; max-width: 100%;}
+    .secfooter .background .img#bottomleft img{position: absolute; bottom: 0px; left: -70px; width: 200px; max-width: 100%;}
+    .secfooter .background .img#topright img{position: absolute; top: -350px; right: -95px; width: 200px; max-width: 100%;}
+    .secfooter .background .img#bottomright img{position: absolute; bottom: 0px; right: -110px; width: 200px; max-width: 100%;}
+    .secfooter form .img#left img {position: absolute; bottom: -10px; left: 100px; width: 130px; max-width: 100%; z-index: 20;}
+    .secfooter form .img#right img {position: absolute; bottom: -25px; right: 110px; width: 115px; max-width: 100%; z-index: 20;}
+    .secfooter form input#submit{padding: 8px 30px; position: absolute; left: 54.5%; border-radius: 50px; bottom: 6.5px; background: linear-gradient(90deg, rgba(46,195,49) 0%, rgba(0,128,3,1) 100%); color: #ffffff; border: 2px solid rgb(0,255,6);}
+    .secfooter h2{text-align: center; font-size: 35px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%; position: relative;}
+    .secfooter p{text-align: center; color: #d9d9d9; font-family: poppins,sans-serif; font-size: 16px; letter-spacing: 2px;}
+  }
+  @media only screen and (max-width: 768px) {
+    .secfooter .background .img#topleft img{position: absolute; top: -130px; left: -140px; width: 200px; max-width: 100%;}
+    .secfooter .background .img#bottomleft img{position: absolute; bottom: 0px; left: -70px; width: 200px; max-width: 100%;}
+    .secfooter .background .img#topright img{position: absolute; top: -350px; right: -145px; width: 200px; max-width: 100%;}
+    .secfooter .background .img#bottomright img{position: absolute; bottom: 0px; right: -110px; width: 200px; max-width: 100%;}
+    .secfooter form .img#left img {position: absolute; bottom: -5px; left: 15px; width: 115px; max-width: 100%; z-index: 20;}
+    .secfooter form .img#right img {position: absolute; bottom: -20px; right: 25px; width: 95px; max-width: 100%; z-index: 20;}
+    .secfooter form input#submit{padding: 6px 30px; position: absolute; left: 59.5%; border-radius: 50px; bottom: 4px; background: linear-gradient(90deg, rgba(46,195,49) 0%, rgba(0,128,3,1) 100%); color: #ffffff; border: 2px solid rgb(0,255,6);}
+    .secfooter h2{text-align: center; font-size: 30px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%; position: relative;}
+    .secfooter p{text-align: center; color: #d9d9d9; font-family: poppins,sans-serif; font-size: 15px; letter-spacing: 2px;}
+    .secfooter form input#phone{padding: 10px 20px; width: 60%; max-width: 100%; border-radius: 50px; border: 2px solid #d9d9d9;}
+  }
+  @media only screen and (max-width: 576px) {
+    .secfooter .background .img#topleft img{position: absolute; top: -130px; left: -160px; width: 200px; max-width: 100%;}
+    .secfooter .background .img#bottomleft img{position: absolute; bottom: 0px; left: -110px; width: 200px; max-width: 100%;}
+    .secfooter .background .img#topright img{position: absolute; top: -350px; right: -175px; width: 200px; max-width: 100%;}
+    .secfooter .background .img#bottomright img{position: absolute; bottom: 0px; right: -155px; width: 200px; max-width: 100%;}
+    .secfooter form .img#left img {position: absolute; bottom: 5px; left: 40px; width: 80px; max-width: 100%; z-index: 20;}
+    .secfooter form .img#right img {position: absolute; bottom: 0px; right: 40px; width: 70px; max-width: 100%; z-index: 20;}
+    .secfooter form input#submit{padding: 6px 30px; position: absolute; left: 60.5%; border-radius: 50px; bottom: 4px; background: linear-gradient(90deg, rgba(46,195,49) 0%, rgba(0,128,3,1) 100%); color: #ffffff; border: 2px solid rgb(0,255,6);}
+    .secfooter h2{text-align: center; font-size: 25px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%; position: relative;}
+    .secfooter p{text-align: center; color: #d9d9d9; font-family: poppins,sans-serif; font-size: 14px; letter-spacing: 2px;}
+    .secfooter form input#phone{padding: 10px 20px; width: 60%; max-width: 100%; border-radius: 50px; border: 2px solid #d9d9d9;}
+  }
+  @media only screen and (max-width: 530px) {
+    .secfooter .background .img#topleft img{position: absolute; top: -130px; left: -160px; width: 200px; max-width: 100%;}
+    .secfooter .background .img#bottomleft img{position: absolute; bottom: 0px; left: -110px; width: 200px; max-width: 100%;}
+    .secfooter .background .img#topright img{position: absolute; top: -350px; right: -175px; width: 200px; max-width: 100%;}
+    .secfooter .background .img#bottomright img{position: absolute; bottom: 0px; right: -155px; width: 200px; max-width: 100%;}
+    .secfooter form .img#left img {position: absolute; bottom: 5px; left: 20px; width: 80px; max-width: 100%; z-index: 20;}
+    .secfooter form .img#right img {position: absolute; bottom: 0px; right: 20px; width: 70px; max-width: 100%; z-index: 20;}
+    .secfooter form input#submit{padding: 6px 10px; position: absolute; left: 63.5%; border-radius: 50px; bottom: 4px; background: linear-gradient(90deg, rgba(46,195,49) 0%, rgba(0,128,3,1) 100%); color: #ffffff; border: 2px solid rgb(0,255,6);}
+    .secfooter h2{text-align: center; font-size: 25px; color: #d9d9d9; font-family: Great Vibes,sans-serif; letter-spacing: 4px; margin-top: 3%; position: relative;}
+    .secfooter p{text-align: center; color: #d9d9d9; font-family: poppins,sans-serif; font-size: 14px; letter-spacing: 2px;}
+    .secfooter form input#phone{padding: 10px 10px; width: 60%; max-width: 100%; border-radius: 50px; border: 2px solid #d9d9d9;}
+  }
+
+
+  .secmenuone{background: url(); background-size: cover; padding: 50px 0px;}
+  .secmenuone h1{text-align: center; font-size: 145px; font-weight: 700; font-family: Poppins,sans-serif; letter-spacing: 4px; color: #c4c4c4;}
+  .secmenuone p{margin: 0; text-align: center; font-family: Great vibes ,sans-serif; font-size: 25px; color: #d9d9d9;}
+  .secmenuone p span{ color: rgb(0,255,6);}
